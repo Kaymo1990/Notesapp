@@ -19,7 +19,7 @@ if(duplicateNotes.length === 0) {
 }
 else {
     console.log('Note title taken!')
-}
+    }
 }
 
 const saveNotes = function(notes) {
@@ -39,7 +39,24 @@ const loadNotes = function () {
     }
 }
 
+const removeNote = function(title) {
+    const notes = loadNotes();
+    const duplicatedNotes = notes.filter(function(note) {
+        return note.title !== title;
+    })
+
+    if(duplicatedNotes.length < notes.length) {
+        saveNotes(duplicatedNotes)
+        console.log('found delete')
+        }
+
+    else {
+        console.log('Note not found');
+    }
+}
+
 module.exports = {
     getNotes: getNotes,
     addNote: addNote,
+    removeNote: removeNote
 }
