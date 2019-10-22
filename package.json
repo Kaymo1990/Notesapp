@@ -1,0 +1,22 @@
+{
+  "name": "notesapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kaymo1990/Notesapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kaymo1990/Notesapp/issues"
+  },
+  "homepage": "https://github.com/Kaymo1990/Notesapp#readme",
+  "dependencies": {
+    "yargs": "^14.2.0"
+  }
+}
