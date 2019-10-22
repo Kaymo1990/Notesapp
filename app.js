@@ -4,6 +4,13 @@ const command = process.argv[2];
 yargs.command({
 command: 'add',
 describe: 'Add a new note',
+builder: {
+    title: {
+        describe: 'Note title',
+        demandOption: true,
+        type: 'string'
+    }
+},
 handler: function() {
     console.log('Adding a new note');
     }
@@ -20,6 +27,11 @@ yargs.command({
 yargs.command({
     command: 'list',
     describe: 'Lists notes',
+    builder: {
+        title: {
+            describe: 'Note title'
+        }
+    },
     handler: function() {
         console.log('Listing notes');
     }
