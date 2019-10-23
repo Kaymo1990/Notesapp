@@ -62,9 +62,16 @@ const listNotes = function() {
     });
 }
 
+const readNote = function(title) {
+    const notes = loadNotes();
+    let index = notes.findIndex(note => note.title == title)
+    console.log(notes[index].body);
+}
+
 module.exports = {
     getNotes: getNotes,
     addNote: addNote,
     removeNote: removeNote,
-    listNotes: listNotes
+    listNotes: listNotes,
+    readNote: readNote
 }
